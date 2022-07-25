@@ -180,7 +180,7 @@ graphCanvas.onmousedown = (e) => {
         return;
     }
     let x = Math.round(((e.offsetX - 200) / width / 0.6 * r * 1.5) * 100) / 100;
-    let y = Math.round(((e.offsetX - 200) / width / 0.6 * r * 1.5 * 100)) / 100;
+    let y = Math.round(((e.offsetY - 200) / width / 0.6 * r * 1.5 * 100)) / 100;
     document.getElementById('x-10').disabled = false;
     document.getElementById('x-10').value = x;
     form['x'].value = x;
