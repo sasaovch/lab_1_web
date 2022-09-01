@@ -1,8 +1,10 @@
 <?php
+const X_VALUES = array(-2, -1.5, -1, -0.5, 0, 0.5, 1, 1.5, 2);
+const R_VALUES = array(1, 2, 3, 4, 5);
 function checkX() {
     if (isset($_GET['x'])) {
         $x = floatval($_GET['x']);
-        if ($x == -2 || $x == -1.5 || $x == -1 || $x == -0.5 || $x == 0 || $x == 0.5 || $x == 1 || $x == 1.5 || $x == 2) {
+        if (in_array($x, X_VALUES)) {
             return true;
         }
     }
@@ -24,18 +26,18 @@ function checkY() {
 function checkR() {
     if (isset($_GET['r'])) {
         $r = floatval($_GET['r']);
-        if ($r == 1 || $r == 2 || $r == 3 || $r == 4 || $r == 5) {
-            echo 'true';
+        if (in_array($r, R_VALUES)) {
             return true;
         }
     }
     return false;
 }
+
 $start_time = microtime(true);
 session_start();
 unset($_SESSION['hit']);
 
-if (checkX() & checkY() & checkR()) {
+if (checkX() && checkY() && checkR()) {
     $r = floatval($_GET['r']);
     $x = floatval($_GET['x']);
     $y = floatval($_GET['y']);
@@ -60,5 +62,7 @@ if (checkX() & checkY() & checkR()) {
     } else {
         $_SESSION['attempts'] = array($attempt);
     }
+    header('Location: ./index.php');
+} else {
+    http_response_code(400);
 }
-header('Location: ./index.php');

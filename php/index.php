@@ -14,6 +14,7 @@
         <meta name="desctiption" content="ITMO 3 sem laboratory work Web 1">
         <meta name="keywords" content="ITMO, lab, web">
         <meta name="author" content="yt">
+        <link rel="shortcut icon" href="../icon/favicon.ico" type="image/x-icon">
         <title>Lab 1 Web</title>
         <style>
             body.light-theme {
@@ -235,7 +236,8 @@
             <tr>
                 <td></td>
                 <td>
-                    <form id="form" action="server.php" method="get" onsubmit="return checkAndSendForm(this)">
+                    <form id="form" action="server.php" method="get">
+                        <!-- onsubmit="return checkAndSendForm(this)" -->
                         <table class="select-table">
                             <tr>
                                 <td>
@@ -286,7 +288,7 @@
                                     <label for="input-y">Y from -3 to 5</label>
                                 </td>
                                 <td colspan="3">
-                                    <input type="text" name="y" id="input-y" placeholder="0" pattern="(-?[1,2](\.\d*)?)|([0,4](\.\d*)?)|([5](\.[0]*)?)|(-[3](\.[0]*)?)">
+                                    <input type="text" name="y" id="input-y" placeholder="0" pattern="(-?[1,2](\.\d*)?)|([0,4](\.\d*)?)|([5](\.[0]*)?)|(-[3](\.[0]*)?)" maxlength="14">
                                 </td>
                             </tr>
                             <tr>
