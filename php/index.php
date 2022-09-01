@@ -80,6 +80,7 @@
                 margin: 0;
                 padding:1%;
             }
+            p:onclick
             input:valid {
                 /* outline: 1px solid var(--button-first-color); */
                 accent-color: var(--main-color);
@@ -153,6 +154,7 @@
                 font-size: 16px;
                 text-transform: uppercase;
                 text-align: center;
+                transition: 0.3s;
             }
             #header:hover {
                 text-shadow: 1px 1px 1px var(--first-shadow),
@@ -164,7 +166,7 @@
                 1px 25px 35px var(--third-shadow),
                 1px 30px 60px var(--second-shadow);
                 opacity: 1;
-                transition: 0.2s;
+                transition: 0.3s;
             }
             #menu {
                 text-align: center;
@@ -209,7 +211,7 @@
         <table>
             <tr id="header" class="gradient">
                 <td id="group">
-                    <h2>P3132<br></h2>
+                    <h2>P32301<br></h2>
                     <h3>3212</h3>
                 </td>
                 <td id="name">
@@ -284,7 +286,7 @@
                                     <label for="input-y">Y from -3 to 5</label>
                                 </td>
                                 <td colspan="3">
-                                    <input type="text" name="y" id="input-y" placeholder="0" pattern="(-?[1,2,3](\.\d*)?)|([0,4](\.\d*)?)|([5])">
+                                    <input type="text" name="y" id="input-y" placeholder="0" pattern="(-?[1,2](\.\d*)?)|([0,4](\.\d*)?)|([5](\.[0]*)?)|(-[3](\.[0]*)?)">
                                 </td>
                             </tr>
                             <tr>
