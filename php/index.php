@@ -288,7 +288,7 @@
                                     <label for="input-y">Y from -3 to 5</label>
                                 </td>
                                 <td colspan="3">
-                                    <input type="text" name="y" id="input-y" placeholder="0" pattern="(-?[1,2](\.\d*)?)|([0,4](\.\d*)?)|([5](\.[0]*)?)|(-[3](\.[0]*)?)" maxlength="14">
+                                    <input type="text" name="y" id="input-y" placeholder="0" pattern="(-?[0,1,2](\.\d*)?)|([0,4](\.\d*)?)|([5](\.[0]*)?)|(-[3](\.[0]*)?)" maxlength="14">
                                 </td>
                             </tr>
                             <tr>

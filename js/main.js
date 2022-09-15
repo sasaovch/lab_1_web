@@ -160,30 +160,30 @@ const width = graphCanvas.width;
 toggleSwitch.addEventListener('change', switchTheme, false);
 window.onload = drawGraph();
 
-graphCanvas.onmousemove = (e) => {
-    drawGraph();
-    graph.fillStyle = graphColor;
-    graph.strokeStyle = graphColor;
-    graph.beginPath();
-    graph.arc(e.offsetX - 200, e.offsetY - 200, 5, 0, Math.PI*2);
-    graph.fill();
-}
+// graphCanvas.onmousemove = (e) => {
+//     drawGraph();
+//     graph.fillStyle = graphColor;
+//     graph.strokeStyle = graphColor;
+//     graph.beginPath();
+//     graph.arc(e.offsetX - 200, e.offsetY - 200, 5, 0, Math.PI*2);
+//     graph.fill();
+// }
 
 graphCanvas.onmouseleave = drawGraph;
 
-graphCanvas.onmousedown = (e) => {
-    /** @type {HTMLFormElement} */
-    const form = document.getElementById("form");
-    let r = getCheckboxValue();
-    if (r == 0) {
-        document.getElementById('warning').innerHTML = "Please, select ONE R";
-        return;
-    }
-    let x = Math.round(((e.offsetX - 200) / width / 0.6 * r * 1.5) * 100) / 100;
-    let y = Math.round(((e.offsetY - 200) / width / 0.6 * r * 1.5 * 100)) / 100;
-    document.getElementById('x-10').disabled = false;
-    document.getElementById('x-10').value = x;
-    form['x'].value = x;
-    form['y'].value = y;
-    form.submit();
-}
+// graphCanvas.onmousedown = (e) => {
+//     /** @type {HTMLFormElement} */
+//     const form = document.getElementById("form");
+//     let r = getCheckboxValue();
+//     if (r == 0) {
+//         document.getElementById('warning').innerHTML = "Please, select ONE R";
+//         return;
+//     }
+//     let x = Math.round(((e.offsetX - 200) / width / 0.6 * r * 1.5) * 100) / 100;
+//     let y = Math.round(((e.offsetY - 200) / width / 0.6 * r * 1.5 * 100)) / 100;
+//     document.getElementById('x-10').disabled = false;
+//     document.getElementById('x-10').value = x;
+//     form['x'].value = x;
+//     form['y'].value = y;
+//     form.submit();
+// }

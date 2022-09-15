@@ -64,5 +64,5 @@ if (checkX() && checkY() && checkR()) {
     }
     header('Location: ./index.php');
 } else {
-    http_response_code(400);
+    header('HTTP/1.0 400 Data is wrong');
 }
